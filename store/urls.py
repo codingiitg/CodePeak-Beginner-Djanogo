@@ -1,5 +1,5 @@
 from django.urls import path
-
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from . import views
 
 urlpatterns = [
@@ -11,3 +11,4 @@ urlpatterns = [
 	path('process_order/', views.processOrder, name="process_order"),
 
 ]
+urlpatterns += staticfiles_urlpatterns()
