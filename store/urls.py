@@ -1,4 +1,6 @@
+from os import startfile
 from django.urls import path
+from django.contrib.staticfiles.urls import startfile_urlpatterns
 
 from . import views
 
@@ -11,3 +13,5 @@ urlpatterns = [
 	path('process_order/', views.processOrder, name="process_order"),
 
 ]
+
+urlpatterns += startfile_urlpatterns()
